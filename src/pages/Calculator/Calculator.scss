@@ -1,0 +1,30 @@
+.cal{
+    border: 1px solid #921029;
+    width: 300px;
+    height: 360;
+    margin: 100px 0 50px 100px;
+    position: relative;
+}
+.cal-inputs{
+    background: #433437;
+    width: 298px;
+    height: 60px;
+    display: flex; 
+    align-items: center; 
+    color: white;
+    border: 1px solid #921029;
+
+} 
+.item{ 
+    border: 1px solid #921029;
+
+ }
+ .row{
+    height: 60px; 
+ }
+ 
+ 
+.op{
+    border: 1px solid #921029; 
+    background: #f2274f;
+}

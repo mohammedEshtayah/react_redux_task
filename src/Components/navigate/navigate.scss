@@ -1,0 +1,52 @@
+.itg-nav { 
+    height: 35px;
+    width: 100%; 
+    border: 2px solid #e8e8e8; 
+    
+    ul{ 
+        width: 100%;  
+        display: flex;
+        justify-content: space-around; 
+        li {  
+            position: relative;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            height: 30px;
+            width: 20%;
+            border-right : 1px solid #e8e8e8;  
+
+        }
+    }
+    .notborder{
+        border-right : 0px ;
+   }
+}
+ 
+
+ 
+
+
+@media screen and (max-width: 576px) {
+     
+    .itg-nav{
+        display: none;
+        transition: height 1s ;
+        ul{
+         height: 100%;
+         width: 100%;
+        }
+     } 
+    .itg-nav-r{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;  
+        align-items: center;
+        height: 250px;
+        width: 100%;
+        transition: height 2.9s ;
+    }
+  
+}
+ 
+  

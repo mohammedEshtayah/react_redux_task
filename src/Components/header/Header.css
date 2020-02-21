@@ -1,0 +1,91 @@
+.itg-header {
+  height: 80px;
+  width: 100%;
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  justify-content: space-between;
+}
+.itg-header .itg-logo {
+  margin-left: 15px;
+  align-self: center;
+  width: 250px;
+}
+.itg-header .link-pages {
+  width: 250px;
+}
+.itg-header .link-pages .itg-search {
+  margin-top: 15px;
+  width: 250px;
+}
+.itg-header .link-pages .itg-search input {
+  box-shadow: 0 0 5px 0 dodgerBlue;
+  width: 230px;
+  padding-left: 30px;
+  border-radius: 50px;
+}
+.itg-header .link-pages .itg-search .itg-icon-search {
+  position: absolute;
+}
+.itg-header .link-pages .itg-search span {
+  margin: 6px 0 0 10px;
+}
+ul li {
+  display: inline;
+  margin-right: 15px;
+}
+@media screen and (max-width: 576px) {
+  .itg-header {
+    display: inline-block;
+    height: 110px;
+  }
+  .link-pages {
+    width: 100%;
+  }
+  .link-pages ul {
+    position: absolute;
+    right: 0;
+  }
+  .itg-menu {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+  }
+  .itg-menu span {
+    background: #1d1d1b;
+    display: block;
+    width: 30px;
+    height: 4px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: all 0.3s linear;
+  }
+  .open {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+  }
+  .open span {
+    background: #1d1d1b;
+    display: block;
+    width: 30px;
+    height: 4px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: all 0.3s linear;
+  }
+  .open span:nth-child(1) {
+    transform: translate(0px, 13px) rotate(-45deg) scalex(1.3);
+    margin: 0;
+  }
+  .open span:nth-child(2) {
+    height: 0;
+    margin: 0;
+  }
+  .open span:nth-child(3) {
+    transform: translate(0px, 9px) rotate(45deg) scalex(1.3);
+  }
+}
