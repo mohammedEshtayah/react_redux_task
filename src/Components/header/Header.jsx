@@ -1,7 +1,21 @@
-import React, { Component } from 'react'; 
+ 
+import React, { useState} from 'react';
 import logo from '../../images/erp-system-icon.png'
 import './Header.css'
-const Header= () =>{
+const Header= (props) =>{
+    
+    const [menu, changeMenu] = useState("itg-menu");
+
+    function toggleclass(){
+        if(menu!="open"){
+            changeMenu("open") 
+            props.changeStyleMenu("itg-nav-r")
+        } 
+        else{
+            changeMenu("itg-menu") 
+            props.changeStyleMenu("itg-nav")
+        }
+    }
     return(
         <header   className="itg-header" >
                 <div className="itg-logo">
@@ -9,7 +23,7 @@ const Header= () =>{
                     <span>  ITGsoftware </span>
                 </div>
                 <div className="link-pages">
-                    <div className="itg-menu">
+                    <div className={menu} onClick={toggleclass}>
                         <span></span>
                         <span></span>
                         <span></span>

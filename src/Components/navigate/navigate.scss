@@ -38,15 +38,19 @@
         }
      } 
     .itg-nav-r{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;  
-        align-items: center;
-        height: 250px;
-        width: 100%;
-        transition: height 2.9s ;
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;  
+            align-items: center;
+            height: 250px;
+            width: 100%;
+            transition: height 2.9s ;
+            li{
+                height: 70px;
+            }
+        }
     }
-  
 }
  
   

@@ -29,7 +29,7 @@
     height: 100%;
     width: 100%;
   }
-  .itg-nav-r {
+  .itg-nav-r ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,5 +37,8 @@
     height: 250px;
     width: 100%;
     transition: height 2.9s;
+  }
+  .itg-nav-r ul li {
+    height: 70px;
   }
 }

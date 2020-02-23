@@ -3,14 +3,15 @@ import React from 'react';
 import './Calculator.css'
 
 import {CalculatorAction} from '../../Actions/CalculatorAction'  
-import Footer  from '../../Components/footer/Footer';
-import Header  from '../../Components/header/Header'; 
+
 import { connect} from 'react-redux'
  
  
 const mapStateToProps = state => { 
     
-     return { info: state.CalculatorReducer};
+     return { info: state.CalculatorReducer,
+        Components:state.saveComponentsReducer
+    };
   }; 
 function mapDispatchToProps(dispatch) {
     return {
@@ -52,6 +53,7 @@ equals(e){
                 operation:"+",
                 result:a
             });
+            
         }
         if(r2[x]=="-"){
             a=parseInt(r[0]) - parseInt(r[1])
@@ -118,7 +120,7 @@ Changes(number){
 render(){
     return(
         <div>
-        <Header/>
+        {this.props.Components.Header} 
             <div className="container cal">
                 <div className="row">
                     <div className="col-12 cal-inputs"> <h1> {this.state.input} </h1></div>
@@ -182,7 +184,7 @@ render(){
 
              }
             
-            <Footer/>
+        {this.props.Components.Footer}  
         
         </div>
     );

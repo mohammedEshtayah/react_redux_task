@@ -11,12 +11,7 @@ const CalculatorReducer = ( state = [] ,action) =>{
             return state
       }
     
-   /*   switch(action.type){
-        case 'change_data':
-          
-        default : 
-            return state;
-    } */
+  
 };
 
 export default CalculatorReducer;

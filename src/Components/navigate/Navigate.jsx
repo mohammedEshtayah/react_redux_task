@@ -1,8 +1,10 @@
 import React, { Component } from 'react';  
 import './navigate.css'
-const navigate= () =>{
+const navigate= (props) =>{
+    
     return(  
-        <nav className="itg-nav" >
+        
+        <nav className={props.itgnav }>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Product list</a></li>

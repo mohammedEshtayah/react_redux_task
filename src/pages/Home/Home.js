@@ -6,9 +6,7 @@ import p1 from '../../images/sabroso-restaurant-s.jpg'
 import p2 from '../../images/ca.jpg'
 import p3 from '../../images/ccc.jpg'
 import p4 from '../../images/sss.jpg' 
-import Footer  from '../../Components/footer/Footer';
-import Header from '../../Components/header/Header';
-import Navigate from '../../Components/navigate/Navigate'; 
+
 
 import fetchProductsAction from './fetchProducts'; 
 import {productsAction} from '../../Actions/productsAction'   
@@ -16,7 +14,10 @@ import { connect} from 'react-redux'
 import { bindActionCreators } from 'redux';
 
 const mapStateToProps = state => { 
-    return { products: state.ProductsReducer};
+    return { 
+        products: state.ProductsReducer,
+        Components:state.saveComponentsReducer
+    };
  }; 
 
 const mapDispatchToProps = dispatch => {
@@ -42,9 +43,9 @@ componentDidMount(){
 render(){
     return(
         <div>
-        
-            <Header/>
-            <Navigate/>
+         
+            {this.props.Components.Header} 
+            {this.props.Components.Navigate} 
             <section >
                     <div className="main-content1">
                     <div className="itg-tital">
@@ -106,7 +107,7 @@ render(){
 
                     </div>
                 </section>
-            <Footer/>
+             {this.props.Components.Footer} 
         </div>
         );
     }
